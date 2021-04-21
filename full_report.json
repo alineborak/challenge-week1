@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-21T14:31:25.851Z",
+    "end": "2021-04-21T14:31:38.157Z",
+    "duration": 12253,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5eef6e12-7855-4920-b061-5f597ecc9031",
+      "title": "",
+      "fullFile": "cypress/integration/cadastro.spec.js",
+      "file": "cypress/integration/cadastro.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "df2fe973-99bf-438b-a28b-f090e58d2abd",
+          "title": "Cadastrar um novo usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar homepage, clicar em login, selecionar a opcao de criar uma conta",
+              "fullTitle": "Cadastrar um novo usuário Acessar homepage, clicar em login, selecionar a opcao de criar uma conta",
+              "timedOut": null,
+              "duration": 12253,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('baseUrl');\ncy.get('div[class*=header_user_info]').click();\ncy.get('div[class*=form-group] input#email_create').type(chance.email());\ncy.get('button#SubmitCreate').click();\ncy.get('input[type=radio]').check('1');\ncy.get('input#customer_firstname').type(chance.first());\ncy.get('input#customer_lastname').type(chance.last());\ncy.get('input#passwd').type(userpassword);\ncy.get('div[class*=selector] #days').select('22');\ncy.get('div[class*=selector] #months').select('April');\ncy.get('div[class*=selector] #years').select('1989');\ncy.get('input#address1').type(chance.address());\ncy.get('input#city').type(chance.city());\ncy.get('div[class*=selector] #id_state').select('Illinois');\ncy.get('input#postcode').type(10022);\ncy.get('div[class*=account_creation] #other').type(chance.phone({\n  formatted: false\n}));\ncy.get('input#phone_mobile').type(chance.phone({\n  formatted: false\n}));\ncy.get('input#alias').type(chance.address());\ncy.get('button#submitAccount').click();\ncy.location(\"pathname\").should(\"contain\", \"/index.php\", {\n  timeout: 8000\n});\ncy.get('div#center_column [class*=info-account]').should('contain', \"Welcome to your account. Here you can manage all of your personal information and orders.\");",
+              "err": {},
+              "uuid": "69204a8c-901a-4244-a86c-4658132ed8cf",
+              "parentUUID": "df2fe973-99bf-438b-a28b-f090e58d2abd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "69204a8c-901a-4244-a86c-4658132ed8cf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12253,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
