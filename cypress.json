@@ -4,7 +4,6 @@
     "experimentalSourceRewriting": false,
     "watchForFileChanges": true,
     "testFiles": "**/*.*spec.*",
-    "testFiles": "**/*.feature",
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
         "configFile":"reporter-config.json"
