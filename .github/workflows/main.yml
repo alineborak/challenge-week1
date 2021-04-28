@@ -36,16 +36,16 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       # Add a task to execute script
-      -run: npm install 
+      - run: npm install 
       
       # Executar os testes usando o cucumber
-      -run: npm run cy:run:cucumber
+      - run: npm run cy:run:cucumber
       
       # Gerar o relatorio em html
-      -run: npm run report:cucumber
+      - run: npm run report:cucumber
       
       # Publicar relatorio em html
-      -name: Deploy to GithubPages
+      - name: Deploy to GithubPages
        uses: JamesIves/github-pages-deploy-action@164583b9e44b4fc5910e78feb607ea7c98d3c7b9
        with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
