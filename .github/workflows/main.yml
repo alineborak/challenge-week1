@@ -46,8 +46,8 @@ jobs:
       
       # Publicar relatorio em html
       - name: Deploy to GithubPages
-       uses: JamesIves/github-pages-deploy-action@164583b9e44b4fc5910e78feb607ea7c98d3c7b9
-       with:
+        uses: JamesIves/github-pages-deploy-action@164583b9e44b4fc5910e78feb607ea7c98d3c7b9
+        with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: cypress/reports
