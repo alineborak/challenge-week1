@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/cypress-io/cypress/develop/cli/schema/cypress.schema.json",
-    "baseUrl": "http://demo.automationtesting.in/",
+    "baseUrl": "http://automationpractice.com/index.php",
     "experimentalSourceRewriting": false,
     "watchForFileChanges": false,
     "testFiles": "**/*.{feature,features}"
