@@ -6,11 +6,9 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
-    "cy:open:cucumber": "npx cypress open --config-file cypress-cucumber.json",
-    "cy:run:cucumber": "npx cypress run --config-file cypress-cucumber.json --spec **/All.features",
-    "report:merge": "mochawesome-merge > full_report.json",
-    "report:mocha": "marge full_report.json",
-    "report:clean": "rm -rf mochawesome-report full_report.json cypress/reports/cucumber-json/**"
+    "report:merge": "mochawesome-merge > index.json",
+    "report:mocha": "marge index.json",
+    "report:clean": "rm -rf mochawesome-report index.json**"
   },
   "keywords": [],
   "author": "",
